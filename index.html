@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Refunds/Cancellations</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: calc(100vw / 1600 * 100);
+  @media (max-width: 768px) {
+    font-size: calc(100vw / 768 * 100);
+  }
+}
+body {
+  min-height: 100vh;
+  padding: 0.5rem;
+  font-size: 0.2rem;
+  background-color: #bdd6d3;
+}
+.main-title {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 0.32rem;
+  color: #2e8074;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // deco lines
+  &:before, &:after {
+    content: '';
+    display: block;
+    margin: 0 0.2rem;
+    flex: 1;
+    border-bottom: 1px solid #2e8074;
+  }
+}
+.wrapper {
+  width: 7rem;
+  margin: auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  @media (max-width: 768px) {
+    width: auto;
+    padding: 0 0.3rem;
+  }
+}
+input[type='radio'] {
+  display: none;
+  &:checked + .item {
+    .title {
+      color: #fff;
+      border-color: #2e8074;
+      background-color: #2e8074;
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+    .content {
+      // for animation! can use padding or margin here
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+      // show content
+      height: auto;
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s, opacity 0.7s; // fade-in slow
+    }
+  }
+}
+.item {
+  display: block;
+  margin-bottom: 0.1rem;
+}
+.title {
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.3rem;
+  color: #2e8074;
+  border: 1px solid;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  // aligned arrow
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // arrow icon
+  &:after {
+    content: '\25bc';
+    display: inline-block;
+    font-size: 12px;
+  }
+}
+.content {
+  width: 95%;
+  margin: 0 auto;
+  padding: 0 0.3rem;
+  line-height: 1.6;
+  color: #2e8074;
+  border: 1px solid;
+  border-width: 0 1px;
+  // default disappear
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s; // fade-out fast 
+}
+    </style>
+</head>
+<body>
+   
+<div class="wrapper">
+    <div class="main-title">Shopping Help</div>
+    <input type="radio" id="radioYour Account" name="accordion" checked="checked"/>
+    <label class="item" for="radioYour Account">
+      <div class="title">Your Account</div>
+      <div class="content">The company itself is a very successful company. He wants some of these duties, but similar training, as if in, none of which we accuse anyone or pains. That is, they are in pain, they abandon the accusers of pain.</div>
+    </label>
+    <input type="radio" id="radioPayment &amp; Pricing" name="accordion"/>
+    <label class="item" for="radioPayment &amp; Pricing">
+      <div class="title">Payment &amp; Pricing</div>
+      <div class="content">The company itself is a very successful company. He wants some of these duties, but similar training, as if in, none of which we accuse anyone or pains. That is, they are in pain, they abandon the accusers of pain.</div>
+    </label>
+    <input type="radio" id="radioReturns &amp; Refunds" name="accordion"/>
+    <label class="item" for="radioReturns &amp; Refunds">
+      <div class="title">Returns &amp; Refunds</div>
+      <div class="content">The company itself is a very successful company. He wants some of these duties, but similar training, as if in, none of which we accuse anyone or pains. That is, they are in pain, they abandon the accusers of pain.</div>
+    </label>
+    <input type="radio" id="radioShipping &amp; Pickup" name="accordion"/>
+    <label class="item" for="radioShipping &amp; Pickup">
+      <div class="title">Shipping &amp; Pickup</div>
+      <div class="content">The company itself is a very successful company. He wants some of these duties, but similar training, as if in, none of which we accuse anyone or pains. That is, they are in pain, they abandon the accusers of pain.</div>
+    </label>
+    <input type="radio" id="radioViewing &amp; Changing Orders" name="accordion"/>
+    <label class="item" for="radioViewing &amp; Changing Orders">
+      <div class="title">Viewing &amp; Changing Orders</div>
+      <div class="content">The company itself is a very successful company. He wants some of these duties, but similar training, as if in, none of which we accuse anyone or pains. That is, they are in pain, they abandon the accusers of pain.</div>
+    </label>
+  </div>
+</body>
+</html>
