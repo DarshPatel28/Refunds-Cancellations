@@ -3,146 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title> Refunds/Cancellations</title>
-    
+    <title>Refund and Cancellation Policy - Spice Box</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
-
-* {
-  box-sizing: border-box;
-}
-html {
-  font-size: calc(100vw / 1600 * 100);
-  @media (max-width: 768px) {
-    font-size: calc(100vw / 768 * 100);
-  }
-}
+        /* styles.css */
 body {
-  min-height: 100vh;
-  padding: 0.5rem;
-  font-size: 0.2rem;
-  background-color: #bdd6d3;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
-.main-title {
-  margin-bottom: 0.5rem;
-  text-align: center;
-  font-family: 'Abril Fatface', cursive;
-  font-size: 0.32rem;
-  color: #2e8074;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // deco lines
-  &:before, &:after {
-    content: '';
-    display: block;
-    margin: 0 0.2rem;
-    flex: 1;
-    border-bottom: 1px solid #2e8074;
-  }
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
 }
-.wrapper {
-  width: 7rem;
-  margin: auto;
-  font-family: 'Source Sans Pro', sans-serif;
-  @media (max-width: 768px) {
-    width: auto;
-    padding: 0 0.3rem;
-  }
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 10px;
 }
-input[type='radio'] {
-  display: none;
-  &:checked + .item {
-    .title {
-      color: #fff;
-      border-color: #2e8074;
-      background-color: #2e8074;
-      &:after {
-        transform: rotate(180deg);
-      }
-    }
-    .content {
-      // for animation! can use padding or margin here
-      margin-top: 0.3rem;
-      margin-bottom: 0.3rem;
-      // show content
-      height: auto;
-      opacity: 1;
-      visibility: visible;
-      transition: all 0.3s, opacity 0.7s; // fade-in slow
-    }
-  }
+
+h1 {
+    margin: 0;
 }
-.item {
-  display: block;
-  margin-bottom: 0.1rem;
+
+h2 {
+    color: #35424a; /* Spice Box brand color */
 }
-.title {
-  padding: 0.1rem 0.3rem;
-  border-radius: 0.3rem;
-  color: #2e8074;
-  border: 1px solid;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.2s;
-  // aligned arrow
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  // arrow icon
-  &:after {
-    content: '\25bc';
-    display: inline-block;
-    font-size: 12px;
-  }
+
+.intro, .cancellation-policy, .refund-policy, .how-to-request, .terms {
+    background: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
 }
-.content {
-  width: 95%;
-  margin: 0 auto;
-  padding: 0 0.3rem;
-  line-height: 1.6;
-  color: #2e8074;
-  border: 1px solid;
-  border-width: 0 1px;
-  // default disappear
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s; // fade-out fast 
+
+.intro:hover, .cancellation-policy:hover, .refund-policy:hover, .how-to-request:hover, .terms:hover {
+    transform: scale(1.02);
 }
+
+.responsive-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #35424a; /* Spice Box brand color */
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
     </style>
 </head>
 <body>
-   
-<div class="wrapper">
-    <div class="main-title">Shopping Help</div>
-    <input type="radio" id="radioYour Account" name="accordion" checked="checked"/>
-    <label class="item" for="radioYour Account">
-      <div class="title">Your Account</div>
-      <div class="content">The company itself is a very successful company. He wants some of these duties, but similar training, as if in, none of which we accuse anyone or pains. That is, they are in pain, they abandon the accusers of pain.</div>
-    </label>
-    <input type="radio" id="radioPayment &amp; Pricing" name="accordion"/>
-    <label class="item" for="radioPayment &amp; Pricing">
-      <div class="title">Payment &amp; Pricing</div>
-      <div class="content">The company itself is a very successful company. He wants some of these duties, but similar training, as if in, none of which we accuse anyone or pains. That is, they are in pain, they abandon the accusers of pain.</div>
-    </label>
-    <input type="radio" id="radioReturns &amp; Refunds" name="accordion"/>
-    <label class="item" for="radioReturns &amp; Refunds">
-      <div class="title">Returns &amp; Refunds</div>
-      <div class="content">The company itself is a very successful company. He wants some of these duties, but similar training, as if in, none of which we accuse anyone or pains. That is, they are in pain, they abandon the accusers of pain.</div>
-    </label>
-    <input type="radio" id="radioShipping &amp; Pickup" name="accordion"/>
-    <label class="item" for="radioShipping &amp; Pickup">
-      <div class="title">Shipping &amp; Pickup</div>
-      <div class="content">The company itself is a very successful company. He wants some of these duties, but similar training, as if in, none of which we accuse anyone or pains. That is, they are in pain, they abandon the accusers of pain.</div>
-    </label>
-    <input type="radio" id="radioViewing &amp; Changing Orders" name="accordion"/>
-    <label class="item" for="radioViewing &amp; Changing Orders">
-      <div class="title">Viewing &amp; Changing Orders</div>
-      <div class="content">The company itself is a very successful company. He wants some of these duties, but similar training, as if in, none of which we accuse anyone or pains. That is, they are in pain, they abandon the accusers of pain.</div>
-    </label>
-  </div>
+    <header>
+        <img src="https://i.ibb.co/tX8tDrz/spice-box-high-resolution-logo.png" alt="Spice Box Logo" class="logo">
+        <h1>Refund and Cancellation Policy</h1>
+
+    </header>
+
+    <section class="intro">
+        <h2>Introduction</h2>
+        <p>At Spice Box, we prioritize customer satisfaction and strive to provide a seamless shopping experience. This Refund and Cancellation Policy outlines the procedures and guidelines that govern the cancellation of orders and the process for requesting refunds. We believe in transparency and want our customers to feel confident in their purchases. If you have any questions or concerns regarding our policies, please do not hesitate to reach out to our customer service team.</p>
+    </section>
+
+    <section class="cancellation-policy">
+        <h2>Cancellation Policy</h2>
+        <p>You can cancel your order within 24 hours of placing it for a full refund. This allows you to change your mind after making a purchase, ensuring that you have the flexibility you need. After the initial 24-hour period, cancellations may incur a fee based on the status of your order. Specifically, if you cancel before the item has shipped, you will receive a full refund. If the order has already been shipped, you may receive a 50% refund if canceled within three days of shipping. Unfortunately, once three days have passed, we cannot process any refunds for cancellations. We encourage you to act quickly if you need to cancel an order.</p>
+    </section>
+
+    <section class="refund-policy">
+        <h2>Refund Policy</h2>
+        <p>If you are not completely satisfied with your purchase, you may request a refund under specific conditions. If you receive a damaged or defective item, please report it to us within 7 days of receipt. We will gladly offer a full refund or replacement for any defective merchandise. If you have simply changed your mind about a purchase, you may request a refund within 14 days of receiving the item. To qualify for a refund, items must be unused and in their original packaging. Refunds will be processed within 7-10 business days after we receive the returned item. We are committed to ensuring that our customers are happy with their purchases and will work diligently to resolve any issues.</p>
+    </section>
+
+    <section class="how-to-request">
+        <h2>How to Request a Cancellation or Refund</h2>
+        <p>To initiate a cancellation or refund request, please follow these simple steps: First, contact our customer service team at <a href="mailto:support@spicebox.com">support@spicebox.com</a>. In your message, please provide your order number and a brief explanation of your request. Our team is dedicated to assisting you and will respond promptly with the necessary instructions to proceed. We aim to make the cancellation and refund process as smooth as possible, ensuring that you feel supported throughout your experience with us.</p>
+    </section>
+
+    <section class="terms">
+        <h2>Terms and Conditions</h2>
+        <p>By placing an order with Spice Box, you agree to our Refund and Cancellation Policy. We reserve the right to modify this policy at any time, and any changes will be communicated through our website. It is your responsibility to review these terms periodically to stay informed about our policies. We value your trust and are committed to maintaining a transparent relationship with our customers. If you have any questions about our terms, please feel free to reach out to us for clarification.</p>
+    </section>
+
+    <footer>
+        <p>For further inquiries, please reach out to us at <a href="mailto:support@spicebox.com">support@spicebox.com</a>. Our customer service team is here to help and ensure that your experience with Spice Box is exceptional!</p>
+    </footer>
+
+
+    <script src="script.js">
+            // script.js
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Refund and Cancellation Policy Loaded");
+
+    // Smooth scroll to sections
+    const links = document.querySelectorAll('h2');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            link.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+});
+
+    </script>
 </body>
 </html>
